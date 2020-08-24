@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+  <reporter-output>
+    <line>
+      <![CDATA[
+login into the application]]>
+    </line>
+    <line>
+      <![CDATA[
+logout from the application]]>
+    </line>
+  </reporter-output>
+  <suite name="Suite" duration-ms="55302" started-at="2020-08-24T11:09:16Z" finished-at="2020-08-24T11:10:12Z">
+    <groups>
+    </groups>
+    <test name="Test1" duration-ms="55302" started-at="2020-08-24T11:09:16Z" finished-at="2020-08-24T11:10:12Z">
+      <class name="com.qa.Test.LoginScript">
+        <test-method status="PASS" signature="before()[pri:0, instance:com.qa.Test.LoginScript@68bbe345]" name="before" is-config="true" duration-ms="603" started-at="2020-08-24T16:39:16Z" finished-at="2020-08-24T16:39:16Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- before -->
+        <test-method status="PASS" signature="setUp(java.lang.reflect.Method)[pri:0, instance:com.qa.Test.LoginScript@68bbe345]" name="setUp" is-config="true" duration-ms="46336" started-at="2020-08-24T16:39:16Z" finished-at="2020-08-24T16:40:03Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.qa.Test.LoginScript.test01_Login_And_LogOut_With_Valid_Username_And_Password() throws java.lang.Exception]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="test01_Login_And_LogOut_With_Valid_Username_And_Password()[pri:0, instance:com.qa.Test.LoginScript@68bbe345]" name="test01_Login_And_LogOut_With_Valid_Username_And_Password" duration-ms="7395" started-at="2020-08-24T16:40:03Z" finished-at="2020-08-24T16:40:10Z">
+          <reporter-output>
+            <line>
+              <![CDATA[
+login into the application]]>
+            </line>
+            <line>
+              <![CDATA[
+logout from the application]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- test01_Login_And_LogOut_With_Valid_Username_And_Password -->
+        <test-method status="PASS" signature="captureScreenShot(org.testng.ITestResult)[pri:0, instance:com.qa.Test.LoginScript@68bbe345]" name="captureScreenShot" is-config="true" duration-ms="1531" started-at="2020-08-24T16:40:10Z" finished-at="2020-08-24T16:40:12Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=test01_Login_And_LogOut_With_Valid_Username_And_Password status=SUCCESS method=LoginScript.test01_Login_And_LogOut_With_Valid_Username_And_Password()[pri:0, instance:com.qa.Test.LoginScript@68bbe345] output=
+login into the application]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- captureScreenShot -->
+        <test-method status="PASS" signature="afterMainMethod()[pri:0, instance:com.qa.Test.LoginScript@68bbe345]" name="afterMainMethod" is-config="true" duration-ms="0" started-at="2020-08-24T16:40:12Z" finished-at="2020-08-24T16:40:12Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMainMethod -->
+        <test-method status="PASS" signature="tearDownSuite()[pri:0, instance:com.qa.Test.LoginScript@68bbe345]" name="tearDownSuite" is-config="true" duration-ms="996" started-at="2020-08-24T16:40:12Z" finished-at="2020-08-24T16:40:13Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownSuite -->
+      </class> <!-- com.qa.Test.LoginScript -->
+    </test> <!-- Test1 -->
+  </suite> <!-- Suite -->
+</testng-results>

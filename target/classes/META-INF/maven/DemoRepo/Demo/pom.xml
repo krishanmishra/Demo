@@ -84,6 +84,13 @@
 			<artifactId>logback-classic</artifactId>
 			<version>1.1.8</version>
 		</dependency>
+		<!-- https://mvnrepository.com/artifact/io.github.bonigarcia/webdrivermanager -->
+		<dependency>
+			<groupId>io.github.bonigarcia</groupId>
+			<artifactId>webdrivermanager</artifactId>
+			<version>4.0.0</version>
+			<scope>compile</scope>
+		</dependency>
 
 
 		<dependency>
@@ -136,11 +143,12 @@
 				<artifactId>maven-surefire-plugin</artifactId>
 				<version>2.20</version>
 				<!-- <executions> <execution> <phase>integration-test</phase> <goals> 
-					<goal>test</goal> </goals> -->
+					<goal>test</goal> </goals> -->				
 				<configuration>
+				
 					<testFailureIgnore>true</testFailureIgnore>
 					<suiteXmlFiles>
-						<file>suite.xml</file>
+						<file>testng.xml</file>
 					</suiteXmlFiles>
 				</configuration>
 

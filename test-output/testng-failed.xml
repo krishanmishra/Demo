@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
+  <test name="Test(failed)">
+    <classes>
+      <class name="com.qa.Test.LoginScript">
+        <methods>
+          <include name="setUp"/>
+          <include name="tearDownSuite"/>
+          <include name="captureScreenShot"/>
+          <include name="before"/>
+          <include name="afterMainMethod"/>
+          <include name="test01_Login_And_LogOut_With_Valid_Username_And_Password"/>
+        </methods>
+      </class> <!-- com.qa.Test.LoginScript -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->

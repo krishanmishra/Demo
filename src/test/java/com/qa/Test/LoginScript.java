@@ -31,7 +31,7 @@ public class LoginScript extends BaseTest {
 		homePage = loginPage.login("username", "password");		
 
 		reportLog("logout from the application");
-		loginPage = homePage.logOut();
+		loginPage = homePage.logOut("username");
 
 	}
 

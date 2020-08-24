@@ -1,16 +1,16 @@
 package com.qa.Pages;
 
+import java.util.List;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-
 import com.qa.Base.BasePage;
 import com.qa.Base.Configuration;
 
-
-public class LoginPage  extends BasePage {
+public class LoginPage extends BasePage {
 	public LoginPage(WebDriver driver) {
 		super(driver);
 	}
@@ -20,11 +20,16 @@ public class LoginPage  extends BasePage {
 
 	@FindBy(xpath = "//input[@id='password']")
 	public WebElement passwordField;
-	
+
 	@FindBy(xpath = "//button[@id='login']")
 	public WebElement loginButton;
-	
-	
+
+	@FindBy(xpath = "//div[contains(text(),'Book Store Application')]")
+	public WebElement expandLink;
+
+	@FindBy(xpath = "//span[contains(text(),'Login')]")
+	public WebElement loginList;
+
 	/**
 	 * login into the application
 	 * 
@@ -36,11 +41,17 @@ public class LoginPage  extends BasePage {
 	public HomePage login(String username, String password) throws Exception {
 		String userName = Configuration.readApplicationFile(username);
 		String pwd = Configuration.readApplicationFile(password);
+		
+		scrollToBottom();
+
+		waitAndClick(expandLink);
+
+		clickOn(loginList);
+		
 		inputText(userNameField, userName);
 		inputText(passwordField, pwd);
 		clickOn(loginButton);
 		return PageFactory.initElements(getDriver(), HomePage.class);
 	}
 
-	
 }

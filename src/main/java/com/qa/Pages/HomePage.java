@@ -6,6 +6,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import com.qa.Base.BasePage;
+import com.qa.Base.Configuration;
 
 
 
@@ -21,11 +22,18 @@ public class HomePage extends BasePage {
 	@FindBy(xpath = "//div[@id='books-wrapper']//button")
 	private WebElement logOut;
 	
+	@FindBy(xpath = "//label[@id='userName-value']")
+	private WebElement userName;
+	
+		
 	/**
 	 * logout from the application
+	 * @throws Exception 
 	 */
-	public LoginPage logOut() {
-		clickOn(logOut);
+	public LoginPage logOut(String username) throws Exception {
+		String userNames = Configuration.readApplicationFile(username);
+		verifyElementText(userName, userNames);		
+		waitAndClick(logOut);
 		return PageFactory.initElements(getDriver(), LoginPage.class);
 	}
 

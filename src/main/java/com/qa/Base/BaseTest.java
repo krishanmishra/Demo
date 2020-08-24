@@ -17,9 +17,6 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.ie.InternetExplorerDriver;
-import org.openqa.selenium.remote.CapabilityType;
-import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.support.PageFactory;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -36,6 +33,8 @@ import com.qa.Pages.LoginPage;
 import com.relevantcodes.extentreports.ExtentReports;
 import com.relevantcodes.extentreports.ExtentTest;
 import com.relevantcodes.extentreports.LogStatus;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
 
 public abstract class BaseTest {
 
@@ -85,11 +84,13 @@ public abstract class BaseTest {
 		if (DriverType.Firefox.toString().toLowerCase().equals(browserType.toLowerCase())) {
 			driver = new FirefoxDriver();
 		} else if (DriverType.IE.toString().toLowerCase().equals(browserType.toLowerCase())) {
-			System.setProperty("webdriver.ie.driver",
-					Utilities.getPath() + "//src//main//resources//webdriver/IEDriverServer.exe");
-			DesiredCapabilities capabilities = new DesiredCapabilities();
-			capabilities.setCapability(CapabilityType.ACCEPT_SSL_CERTS, true);
-			driver = new InternetExplorerDriver(capabilities);
+//			System.setProperty("webdriver.ie.driver",
+//					Utilities.getPath() + "//src//main//resources//webdriver/IEDriverServer.exe");
+//			DesiredCapabilities capabilities = new DesiredCapabilities();
+//			capabilities.setCapability(CapabilityType.ACCEPT_SSL_CERTS, true);
+//			driver = new InternetExplorerDriver(capabilities);
+			WebDriverManager.firefoxdriver().setup();
+			 driver = new FirefoxDriver();
 		}
 
 		else if (DriverType.Chrome.toString().toLowerCase().equals(browserType.toLowerCase())) {
@@ -98,6 +99,8 @@ public abstract class BaseTest {
 			ChromeOptions chromeOptions = new ChromeOptions();
 			chromeOptions.addArguments("disable-infobars");
 			driver = new ChromeDriver(chromeOptions);
+//			 WebDriverManager.chromedriver().setup();
+//		   driver = new ChromeDriver();
 		} else {
 			throw new Exception("Please pass valid browser type value");
 		}
