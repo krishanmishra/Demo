@@ -145,7 +145,6 @@
 				<!-- <executions> <execution> <phase>integration-test</phase> <goals> 
 					<goal>test</goal> </goals> -->				
 				<configuration>
-				
 					<testFailureIgnore>true</testFailureIgnore>
 					<suiteXmlFiles>
 						<file>testng.xml</file>
